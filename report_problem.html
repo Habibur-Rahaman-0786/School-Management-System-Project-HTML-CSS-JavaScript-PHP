@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report a Problem</title>
+    <style>
+        /* General Styling */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            background: url("report.png");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Centered Card Container */
+        .container {
+            background: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            padding: 30px;
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+        }
+
+        /* Title Styling */
+        h1 {
+            font-size: 24px;
+            color: #0078D7;
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Form Elements Styling */
+        form label {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 8px;
+            display: block;
+            text-align: left;
+        }
+
+        form input[type="text"],
+        form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-sizing: border-box;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        form input:focus,
+        form textarea:focus {
+            border-color: #1e73be;
+            box-shadow: 0 0 5px rgba(30, 115, 190, 0.5);
+            outline: none;
+        }
+
+        form textarea {
+            resize: none;
+        }
+
+        form button {
+            background-color: #1e73be;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        form button:hover {
+            background-color: #155b8a;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Report a Problem</h1>
+        <form method="POST" action="report_problem.php">
+            <label for="sender_username"><b>Your Username:</b></label>
+            <input type="text" id="sender_username" name="sender_username" placeholder="Enter your username" required>
+            
+            <label for="message_topic"><b>Topic:</b></label>
+            <input type="text" id="message_topic" name="message_topic" placeholder="Enter the topic" required>
+            
+            <label for="message_content"><b>Describe Your Problem:</b></label>
+            <textarea id="message_content" name="message_content" rows="5" placeholder="Describe your issue" required></textarea>
+            
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

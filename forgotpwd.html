@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>::: Forgot Password :::</title>
+    <style>
+        /* Frutiger Aero Styling */
+        body {
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            background: url("about.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        h2 {
+            color: #0077b6;
+            margin-top: 40px;
+            font-size: 28px;
+			text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        h4 {
+            color: #555;
+            font-size: 18px;
+            margin-top: 10px;
+            margin-bottom: 30px;
+            line-height: 1.5;
+        }
+
+        form {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 40px;
+            max-width: 400px;
+            margin: 0 auto;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-sizing: border-box;
+            transition: border-color 0.3s ease;
+        }
+
+        input[type="text"]:focus {
+            border-color: #1e73be;
+            outline: none;
+        }
+
+        .frutiger-button {
+  cursor: pointer;
+  position: relative;
+  padding: 2px;
+  border-radius: 12px; /* Increased border-radius for more rounded corners */
+  border: 0;
+  text-shadow: 1px 1px #000a;
+  background: linear-gradient(#006caa, #00c3ff);
+  box-shadow: 0px 4px 6px 0px #0008;
+  /* Removed transition and animation for no effects */
+}
+
+.frutiger-button:hover {
+  box-shadow: 0px 6px 12px 0px #0009;
+}
+
+.frutiger-button:active {
+  box-shadow: 0px 0px 0px 0px #0000;
+}
+
+.inner {
+  position: relative;
+  inset: 0px;
+  padding: 1em;
+  border-radius: 10px; /* Rounded corners for inner content */
+  background: radial-gradient(circle at 50% 100%, #30f8f8 10%, #30f8f800 55%),
+    linear-gradient(#00526a, #009dcd);
+  overflow: hidden;
+  /* Removed transition */
+}
+
+.top-white {
+  position: absolute;
+  border-radius: inherit;
+  inset: 0 -8em;
+  background: radial-gradient(
+    circle at 50% -270%,
+    #fff 45%,
+    #fff6 60%,
+    #fff0 60%
+  );
+}
+
+.inner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+}
+
+.frutiger-button:active .inner::after {
+  box-shadow: inset 0px 2px 8px -2px #000a;
+}
+
+.text {
+  position: relative;
+  z-index: 1;
+  color: white;
+  font-weight: 550;
+}
+
+    </style>
+</head>
+<body>
+
+    <h2>Forgot Password?</h2>
+    <h4>Don't worry! Just enter your username and we'll send a request to admin to change your password for you!</h4>
+
+    <form method="POST" action="forgotpwd.php">
+        <input type="text" name="sender_username" placeholder="Enter your UserID" required><br>
+		<br>
+        <button type="submit" class="frutiger-button">
+		<div class="inner">
+		<div class="top-white"></div>
+		<span class="text">Send Request</span>
+		</div>
+		</button>
+    </form>
+
+</body>
+</html>

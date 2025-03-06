@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>::: openBoard ERP :::</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            transition: background-image 1s ease;
+        }
+        h1 {
+            color: #ffffff;
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        hr {
+            border: 1px solid #fff;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .login-container {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            width: 400px;
+            text-align: center;
+        }
+
+        .links-container {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            width: 400px;
+            text-align: center;
+        }
+
+        label {
+            font-size: 1.2rem;
+            color: #333;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 1rem;
+        }
+
+        input[type="submit"] {
+            background-color: #87CEEB; /* Sky blue color */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* Glow effect on hover */
+        input[type="submit"]:hover {
+            box-shadow: 0 0 15px rgba(135, 206, 235, 0.8); /* Sky blue glow */
+            background-color: #00BFFF; /* Darker sky blue */
+        }
+
+        a {
+            margin: 0 10px;
+            color: #333;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+        a:hover {
+            color: #4CAF50;
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .login-container, .links-container {
+                width: 80%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h1 style="color:black;">Login</h1>
+        <hr>
+        <form action="login.php" method="post">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <a href="forgotpwd.html">Forgot Password?</a><br>
+            <br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <div class="links-container">
+        <a href="Team.html">Team</a>
+        <a href="Documentation.pdf">Documentation</a>
+        <a href="About.html">About</a>
+    </div>
+    
+    <script>
+        const images = [
+            'url("image1.png")',
+            'url("image2.png")',
+        ];
+
+        let currentIndex = 0;
+
+        function changeBackgroundImage() {
+            document.body.style.backgroundImage = images[currentIndex];
+            currentIndex = (currentIndex + 1) % images.length;
+        }
+
+        setInterval(changeBackgroundImage, 2500);
+    </script>
+</body>
+</html>

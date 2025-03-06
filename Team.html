@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>::: Team :::</title>
+    <style>
+        body {
+            background: url("about.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.8); /* Glass-like transparency */
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+        h2 {
+            font-size: 2.5em;
+            color: #0077b6; /* Ocean blue */
+            margin-bottom: 20px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        h3 {
+            font-size: 1.8em;
+            color: #0096c7; /* Lighter blue */
+            margin-bottom: 20px;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+        }
+        p {
+            font-size: 1.2em;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 30px;
+        }
+        .team-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        .team-member {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            width: 150px;
+        }
+        .team-member img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%; /* Circular profile images */
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+        .team-member img:hover {
+            transform: scale(1.1); /* Slight zoom on hover */
+        }
+        .team-member p {
+            margin-top: 10px;
+            font-weight: bold;
+            color: #0077b6;
+        }
+        .signature {
+            margin-top: 30px;
+            font-size: 1.2em;
+            color: #0077b6;
+            font-weight: bold;
+        }
+        .heart {
+            color: #e63946; /* Red heart */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Meet the Team</h2>
+
+        <h3>The Developers</h3>
+		<br>
+        <div class="team-section">
+            <div class="team-member">
+                <img src="d1.jpg" alt="Habibur Rahaman">
+                <p>Habibur Rahaman</p>
+            </div>
+            <div class="team-member">
+                <img src="d2.jpg" alt="Himanshu Bhatt">
+                <p>Himanshu Bhat</p>
+            </div>
+        </div>
+        <p>
+            The openBOARD ERP is the result of a passionate and talented team of developers at openLABS who share a common vision: to revolutionize school management with open-source, user-friendly solutions.
+            Combining expertise in software engineering, UI/UX design, and education technology, the team worked tirelessly to create a system that is both powerful and easy to use.
+        </p>
+
+        <h3>The UI/UX Designers</h3>
+		<br>
+        <div class="team-section">
+            <div class="team-member">
+                <img src="u1.jpg" alt="Shreya Warhade">
+                <p>Shreya Warhade</p>
+            </div>
+            <div class="team-member">
+                <img src="u2.jpg" alt="Sakshi Patil">
+                <p>Sakshi Patil</p>
+            </div>
+        </div>
+        <p>
+            The sleek and intuitive interface of openBOARD ERP is a testament to the creativity and expertise of the UI/UX team at openLABS.
+            With a deep understanding of user behavior and a commitment to simplicity, this team meticulously crafted a frontend that ensures seamless navigation and an engaging user experience.
+        </p>
+
+        <p class="signature">Made with <span class="heart">❤️</span> by openLABS Team</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>::: Upload Marks :::</title>
+    <style>
+        /* Styling for body background */
+        body {
+            background: url("marks.png");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Form container styling */
+        .form-container {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            padding: 30px;
+            width: 400px;
+            margin: 20px auto; /* Center the container */
+            text-align: center;
+        }
+
+        /* Header styling */
+        h1 {
+            font-size: 2.2em;
+            color: #0077b6; /* Ocean blue */
+            margin-bottom: 20px;
+            text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        h3 {
+            font-size: 1.5em;
+            color: #023e8a; /* Darker blue */
+            margin-bottom: 15px;
+        }
+
+        /* Label and input field styling */
+        label {
+            display: block;
+            font-size: 1em;
+            color: #495057;
+            margin-bottom: 5px;
+            text-align: left;
+        }
+
+        input, select {
+            width: calc(100% - 20px);
+            padding: 8px 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 1em;
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease, border 0.3s ease;
+        }
+
+        input:focus, select:focus {
+            border-color: #0077b6;
+            box-shadow: 0 0 8px rgba(0, 119, 182, 0.5);
+            outline: none;
+        }
+
+        /* Button styling */
+        .frutiger-button {
+  cursor: pointer;
+  position: relative;
+  padding: 2px;
+  border-radius: 12px; /* Increased border-radius for more rounded corners */
+  border: 0;
+  text-shadow: 1px 1px #000a;
+  background: linear-gradient(#006caa, #00c3ff);
+  box-shadow: 0px 4px 6px 0px #0008;
+  /* Removed transition and animation for no effects */
+}
+
+.frutiger-button:hover {
+  box-shadow: 0px 6px 12px 0px #0009;
+}
+
+.frutiger-button:active {
+  box-shadow: 0px 0px 0px 0px #0000;
+}
+
+.inner {
+  position: relative;
+  inset: 0px;
+  padding: 1em;
+  border-radius: 10px; /* Rounded corners for inner content */
+  background: radial-gradient(circle at 50% 100%, #30f8f8 10%, #30f8f800 55%),
+    linear-gradient(#00526a, #009dcd);
+  overflow: hidden;
+  /* Removed transition */
+}
+
+.top-white {
+  position: absolute;
+  border-radius: inherit;
+  inset: 0 -8em;
+  background: radial-gradient(
+    circle at 50% -270%,
+    #fff 45%,
+    #fff6 60%,
+    #fff0 60%
+  );
+}
+
+.inner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+}
+
+.frutiger-button:active .inner::after {
+  box-shadow: inset 0px 2px 8px -2px #000a;
+}
+
+.text {
+  position: relative;
+  z-index: 1;
+  color: white;
+  font-weight: 550;
+}
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Enter Student Marks</h1>
+        <form action="save_marks.php" method="POST">
+            <label for="first_name">First Name:</label>
+            <input type="text" id="first_name" name="first_name" required>
+
+            <label for="last_name">Last Name:</label>
+            <input type="text" id="last_name" name="last_name" required>
+
+            <label for="class">Class:</label>
+            <input type="text" id="class" name="class" required>
+
+            <label for="academic_year">Academic Year (e.g., 2023-2024):</label>
+            <input type="text" id="academic_year" name="academic_year" required>
+
+            <label for="exam_type">Exam Type:</label>
+            <select id="exam_type" name="exam_type" required>
+                <option value="FA1">FA1</option>
+                <option value="SA1">SA1</option>
+                <option value="FA2">FA2</option>
+                <option value="SA2">SA2</option>
+            </select>
+
+            <h3>Enter Marks</h3>
+
+            <label for="physics">Physics:</label>
+            <input type="number" id="physics" name="physics" min="0" max="60" required>
+
+            <label for="chemistry">Chemistry:</label>
+            <input type="number" id="chemistry" name="chemistry" min="0" max="60" required>
+
+            <label for="biology">Biology:</label>
+            <input type="number" id="biology" name="biology" min="0" max="60" required>
+
+            <label for="maths">Maths:</label>
+            <input type="number" id="maths" name="maths" min="0" max="60" required>
+
+            <label for="english">English:</label>
+            <input type="number" id="english" name="english" min="0" max="60" required>
+
+            <label for="sst">SST:</label>
+            <input type="number" id="sst" name="sst" min="0" max="60" required>
+
+            <label for="hindi">Hindi:</label>
+            <input type="number" id="hindi" name="hindi" min="0" max="60" required>
+
+            <label for="computers">Computers:</label>
+            <input type="number" id="computers" name="computers" min="0" max="60" required>
+
+            <button class="frutiger-button">
+  <div class="inner">
+    <div class="top-white"></div>
+    <span class="text">Submit</span>
+  </div>
+</button>
+        </form>
+    </div>
+</body>
+</html>

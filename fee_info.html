@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>::: Fee Info :::</title>
+    <style>
+        /* General Styling */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            background: url("fee_info.png");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Centered Card Container */
+        .container {
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            padding: 30px;
+            max-width: 600px;
+            width: 90%;
+            text-align: left;
+        }
+
+        /* Title Styling */
+        h1 {
+            font-size: 28px;
+            color: #1e73be;
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+        }
+
+        h3 {
+            font-size: 22px;
+            color: #1e73be;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        /* Fee Section Styling */
+        .fee-section {
+            margin-bottom: 20px;
+        }
+
+        .fee-section b {
+            font-size: 18px;
+            color: #555;
+        }
+
+        .fee-section p {
+            font-size: 16px;
+            margin-left: 10px;
+            color: #333;
+        }
+
+        /* Styling for Amounts */
+        .amount {
+            font-weight: bold;
+            font-size: 18px;
+            color: #1e73be;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 style="text-align:center;">Fee Information</h1>
+        
+        <div class="fee-section">
+            <h3>Academics</h3>
+            <p><b>First Installment</b></p>
+            <p>Amount Payable: <span class="amount">Rs. 50,000/-</span></p>
+            <p><b>Second Installment</b></p>
+            <p>Amount Payable: <span class="amount">Rs. 50,000/-</span></p>
+        </div>
+
+        <div class="fee-section">
+            <h3>Transportation</h3>
+            <p><b>First Installment</b></p>
+            <p>Amount Payable: <span class="amount">Rs. 15,000/-</span></p>
+            <p><b>Second Installment</b></p>
+            <p>Amount Payable: <span class="amount">Rs. 15,000/-</span></p>
+        </div>
+    </div>
+</body>
+</html>
